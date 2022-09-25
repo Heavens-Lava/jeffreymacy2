@@ -88,7 +88,7 @@ const Home = () => {
             <img
               src={HeroImage}
               alt="my profile"
-              className="profilePicture rounded-2xl mx-auto w-2/3 md:w-full animate-bounceInUp animate-slow"
+              className="profilePicture rounded-2xl mx-auto w-2/3 md:w-full animate-tada animate-slow"
             />
           </div>
         </div>
