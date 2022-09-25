@@ -10,6 +10,7 @@ import { Parallax } from "react-parallax";
 import background1 from "../assets/backgroundImages/rocks.jpg";
 import AnimatedLetters from "./AnimatedLetters/index";
 
+//The Main component of website
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = [
