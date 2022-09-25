@@ -27,6 +27,7 @@ const Home = () => {
     "y",
   ];
 
+  //after 3 seconds change state
   useEffect(() => {
     setTimeout(() => {
       return setLetterClass("text-animate-hover");
