@@ -9,7 +9,6 @@ import Contact from "./components/Contact";
 
 import "./App.scss";
 
-// "homepage": "http://heavens-lava.github.io/my-portfolio",
 function App() {
   return (
     <div>
