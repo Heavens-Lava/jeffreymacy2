@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import HeroImage from "../assets/icons/heroImage.png";
+// import HeroImage from "../assets/icons/heroImage.png";
+import pic from "../assets/icons/portfolio_pic1080.png";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 
@@ -88,9 +89,9 @@ const Home = () => {
 
           <div>
             <img
-              src={HeroImage}
+              src={pic}
               alt="my profile"
-              className="profilePicture rounded-2xl mx-auto w-2/3 md:w-full animate-tada animate-slow"
+              className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
             />
           </div>
         </div>
