@@ -11,13 +11,17 @@ const Contact = () => {
           <p className="contactHeader text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          <p className="contactParagraph py-6">
-            Talk with me! If you like my website, send me a Message :) If your a
-            hiring manager you can also email me at 'macy.jeffreyj@gmail.com' to
-            get in touch with me. I am also looking for any freelance
-            opportunites so you can text me at 623-374-1419. I do not often
-            answer unknown phone calls so a text message will let me know who
-            you are. Thanks for visiting my website!
+          <p className="contactParagraph1 py-6">
+            Talk with me! If you like my website, send me a Message :D
+          </p>
+          <p className="contactParagraph2 py-1">
+            If your a hiring manager you can also get in touch with me at:
+            'macy.jeffreyj@gmail.com'. I am also looking for any freelance
+            opportunites so you can text me at 623-374-1419.
+          </p>
+          <p className="contactParagraph3 py-2">
+            I do not often answer unknown phone calls so a text message will let
+            me know who you are. Thanks for visiting my website!
           </p>
         </div>
 
