@@ -12,7 +12,12 @@ const Contact = () => {
             Contact
           </p>
           <p className="contactParagraph py-6">
-            Submit the form below to get in touch with me
+            Talk with me! If you like my website, send me a Message :) If your a
+            hiring manager you can also email me at 'macy.jeffreyj@gmail.com' to
+            get in touch with me. I am also looking for any freelance
+            opportunites so you can text me at 623-374-1419. I do not often
+            answer unknown phone calls so a text message will let me know who
+            you are. Thanks for visiting my website!
           </p>
         </div>
 
