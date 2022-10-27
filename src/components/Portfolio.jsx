@@ -1,5 +1,6 @@
 import React from "react";
 import ecommerce from "../assets/portfolio/Capture.PNG";
+import createUser from "../assets/portfolio/create-user-preview.PNG";
 
 //import parallax library
 import { Parallax } from "react-parallax";
@@ -13,6 +14,16 @@ const Portfolio = () => {
     {
       id: 1,
       src: ecommerce,
+      href: "https://ecommerce-sanity-stripe-omega-ten.vercel.app/",
+      github: "https://github.com/Heavens-Lava/ecommerce_sanity_stripe",
+      desc: "Made with Next.js, Sanity DB and Stripe",
+    },
+    {
+      id: 2,
+      src: createUser,
+      href: "https://springboot-create-user-front.herokuapp.com/",
+      github: "https://github.com/Heavens-Lava/create-user-frontend",
+      desc: "Made with React.js, Java Springboot APIs and MySQL DB",
     },
   ];
 
@@ -43,32 +54,27 @@ const Portfolio = () => {
 
           {/* 3 columns 12 padding between, 2 columns on mobile, 0 padding on mobile */}
           <div className="portfolioGrid grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-            {projects.map(({ id, src }) => (
-              <div key={1} className="shadow-md shadow-gray-600 rounded-lg">
+            {projects.map(({ id, src, href, github, desc }) => (
+              <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
                 <img
                   src={src}
                   alt=""
                   className="rounded-md duration-200 hover:scale-105"
                 />
                 <div>
-                  <a
-                    href="https://ecommerce-sanity-stripe-omega-ten.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={href} target="_blank" rel="noreferrer">
                     <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                      Website
+                      Website Link
                     </button>
                   </a>
-                  <a
-                    href="https://github.com/Heavens-Lava/ecommerce_sanity_stripe"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={github} target="_blank" rel="noreferrer">
                     <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                       Code (my github)
                     </button>
                   </a>
+                  <p className="w-1/2 px-1 py-3 m-4 duration-200 hover:scale-105">
+                    {desc}
+                  </p>
                 </div>
               </div>
             ))}
