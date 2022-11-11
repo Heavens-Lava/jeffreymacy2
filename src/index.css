@@ -8,7 +8,109 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Raleway", sans-serif;
+  html,
+  body {
+    /* change default font */
+    font-family: "Raleway", "Montserrat", sans-serif;
+    /* change default color  */
+    color: var(--text-black);
   }
 }
+
+h1,
+section,
+p,
+span,
+svg,
+.navBarParent {
+  @apply transition-all duration-500;
+}
+
+:root {
+  --text-black: #333332;
+  --primary-color: #faf4e5;
+  --primary-pink: #e5a1aa;
+  --primary-purple: #c026d3;
+}
+/* 
+.section {
+  width: 50%;
+  padding: 1000px 4%;
+  margin: 0;
+  background-color: var(--primary-color);
+} */
+
+.toggle-button:hover .onCircle,
+.toggle-button:hover .offCircle {
+  transform: scale(0.8);
+}
+
+.onCircle {
+  position: absolute;
+  left: 64px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-purple);
+  transition: all 0.2s ease-in-out;
+}
+
+.offCircle {
+  position: absolute;
+  left: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.slide {
+  left: 28px;
+}
+
+/* marquee effects -----------------------------------------  */
+
+/* white section */
+/* overflow hidden removes horizontal scroll bar when content overflows
+ */
+.marquee-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  /* min-height: 75vh; */
+  min-height: 20vh;
+}
+
+/* use no wrap so text doesn't wrap to next line */
+.marquee-container {
+  /* margin-top: 500px; */
+  white-space: nowrap;
+  font-weight: 100;
+  font-size: 9vw;
+  letter-spacing: 5px;
+  height: 20vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* add margin between each item */
+.marquee-text {
+  margin-right: 10rem;
+  /* position: absolute; */
+}
+
+/* ----------------------------------------  */
+
+iframe {
+  width: 100%;
+  margin-right: auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
+/* ----------------------------------------  */

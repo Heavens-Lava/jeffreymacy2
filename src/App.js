@@ -6,20 +6,36 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import InfiniteMarquee from "./components/InfiniteMarquee";
 
 import "./App.scss";
+import Room from "./components/Room";
+import RoomPage2 from "./components/RoomPage2";
+
+import { StyleContext } from "./components/StyleContext";
+import { useState } from "react";
 
 function App() {
+  const [style, setStyle] = useState("onCircle");
+  const [textPosition, setTextPosition] = useState([0, 0, 10]);
+
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
+      <StyleContext.Provider
+        value={{ style, setStyle, textPosition, setTextPosition }}
+      >
+        <NavBar />
+        <Home />
+        <About />
+        <InfiniteMarquee />
+        <Portfolio />
+        <Experience />
+        <Room />
+        <RoomPage2 />
+        <Contact />
 
-      <SocialLinks />
+        <SocialLinks />
+      </StyleContext.Provider>
     </div>
   );
 }

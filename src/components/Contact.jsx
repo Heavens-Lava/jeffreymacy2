@@ -1,25 +1,63 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
 
 const Contact = () => {
+  // ---------------------------------------- text transition effects ----------------------------------------
+  // create text transition effects(fade in and out)
+  const sectionRef = useRef(null);
+
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
+
+  const fadeOut = (element) => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -12,
+      ease: "power4.out",
+      // for secondary elements, it will take 1.0 seconds for it to appear after initial fade in
+      stagger: { amount: 1.0 },
+    });
+  };
+
+  const fadeIn = (element) => {
+    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power4.out" });
+  };
+
+  // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
+  intersection && intersection.intersectionRatio > 0.2
+    ? // only elements with the fadeIn className is going to fade out
+      fadeOut(".fadeIn")
+    : // else fade in
+      fadeIn(".fadeIn");
+  //---------------------------------------- end transition effects ----------------------------------------
+
   return (
     <div
       name="contact"
-      className="contactBackground w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      // className="contactBackground h-screen w-full bg-gradient-to-b from-red-400 to-lime-200 dark:from-black dark:to-gray-800 p-4 text-white"
+      className="contactBackground h-screen w-full bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-500 dark:via-rose-700 dark:to-gray-800 p-4 text-white"
     >
-      <div className="contactSection flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+      <div
+        ref={sectionRef}
+        className="contactSection flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
+      >
         <div className="pb-8">
-          <p className="contactHeader text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="fadeIn contactHeader text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          <p className="contactParagraph1 py-6">
+          <p className="fadeIn contactParagraph1 py-6">
             Talk with me! If you like my website, send me a Message :D
           </p>
-          <p className="contactParagraph2 py-1">
+          <p className="fadeIn contactParagraph2 py-1">
             If your a hiring manager you can also get in touch with me at:
             'macy.jeffreyj@gmail.com'. I am also looking for any freelance
             opportunites so you can text me at 623-374-1419.
           </p>
-          <p className="contactParagraph3 py-2">
+          <p className="fadeIn contactParagraph3 py-2">
             I do not often answer unknown phone calls so a text message will let
             me know who you are. Thanks for visiting my website!
           </p>
@@ -30,7 +68,8 @@ const Contact = () => {
           <form
             action="https://getform.io/f/72eb763b-5fa5-42d5-bbda-d93ac9f9b69c"
             method="POST"
-            className="contactForm flex flex-col w-full md:w-1/2 animate-fadeInUp animate-delay-1s animate-duration-1000"
+            className="contactForm flex flex-col w-full md:w-1/2"
+            // className="contactForm flex flex-col w-full md:w-1/2 animate-fadeInUp animate-delay-1s animate-duration-1000"
           >
             <input
               type="text"

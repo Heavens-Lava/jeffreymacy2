@@ -33,7 +33,7 @@ const NavBar = () => {
 
   // NavBar display
   return (
-    <div className="navBarParent flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-50 opacity-80">
+    <div className="navBarParent flex justify-between items-center w-full h-20 px-4 text-white dark:bg-black fixed z-50 dark:opacity-80">
       <div>
         <h1 className="myNameText text-5xl font-signature ml-2">
           Jeffrey Macy

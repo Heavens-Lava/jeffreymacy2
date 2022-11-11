@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 import { Parallax } from "react-parallax";
 
 //import images
-import background1 from "../assets/backgroundImages/rocks.jpg";
+import background1 from "../assets/backgroundImages/ocean2.jpg";
 import AnimatedLetters from "./AnimatedLetters/index";
 
 //The Main component of website
@@ -48,7 +48,7 @@ const Home = () => {
         name="home"
         className="homeSceneBackground md:h-screen w-full"
       >
-        <div className="homeSceneContent max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-0 pl-4 mt-60 md:flex-row z-50 bg-black bg-opacity-70 rounded-2xl">
+        <div className="homeSceneContent max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-0 pl-4 mt-60 md:flex-row z-50 bg-black bg-opacity-50 dark:bg-opacity-70 rounded-2xl">
           <div className="textColumn flex flex-col justify-center h-full ">
             <h2 className="titleText text-4xl sm:text-8xl font-bold text-white">
               <span className={letterClass}>H</span>
@@ -63,10 +63,11 @@ const Home = () => {
                 className="animate-fadeIn animate-duration-1000 animate-delay-1s animate-fill-backwards"
               />{" "}
             </h2>
-            <p className="paragraphText text-gray-400 pt-6 py-2 max-w-md animate-fadeIn animate-slow animate-delay-2s">
-              I love to work on web applications
+            <p className="paragraphText text-gray-300 dark:text-gray-400 pt-6 py-2 max-w-md animate-fadeIn animate-slow animate-delay-2s">
+              I love to work on web applications, mobile games, and simple
+              productivity apps
             </p>
-            <p className="paragraphText text-gray-400 py-4 max-w-md animate-fadeIn animate-slow animate-delay-3s">
+            <p className="paragraphText text-gray-300 dark:text-gray-400 py-4 max-w-md animate-fadeIn animate-slow animate-delay-3s">
               Get to know about me and what skills I offer
             </p>
 
