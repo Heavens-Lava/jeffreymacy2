@@ -243,6 +243,7 @@ const Room = () => {
   }, [{ stickyPosition }]);
 
   return (
+    // if mobileView is not true, render
     <div className="w-full h-screen relative bg-gradient-to-b from-slate-300 to-primary-pink dark:from-black dark:to-fuchsia-700 transition-all dark:transition-all">
       {!mobileView ? (
         <StickyBox offsetBottom={0} offsetTop={0} bottom={false}>
@@ -329,8 +330,9 @@ const Room = () => {
             />
             {/* <pointLight position={[5, 5, 5]} intensity={1} /> */}
 
+            {/* removed if in mobile view */}
             {/* orbit controls */}
-            <Controls />
+            {/* <Controls /> */}
 
             {/* helpers to view the 3d enviroment */}
             {/* <primitive object={new THREE.AxesHelper(10)} />

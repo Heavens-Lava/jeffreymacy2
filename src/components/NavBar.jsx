@@ -58,7 +58,9 @@ const NavBar = () => {
       </div>
 
       {/* dark mode toggle button */}
+      {/* toggle bar is hidden if viewport gets below 350px */}
       <div className="toggle-bar hidden xs:flex flex-row  z-50">
+        {/* this hides the svg if viewport width gets below 640px*/}
         <div className="sun-wrapper flex-row justify-center items-center hidden sm:flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"

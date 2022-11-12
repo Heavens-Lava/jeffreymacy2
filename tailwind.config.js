@@ -24,7 +24,7 @@ module.exports = withAnimations({
         special: "all 0.2s ease-in-out",
       },
       screens: {
-        xs: "380px",
+        xs: "320px",
       },
     },
     fontFamily: {

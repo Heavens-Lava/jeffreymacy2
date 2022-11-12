@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import pic from "../assets/icons/heroImage3.png";
+import pic2 from "../assets/icons/heroImage4.png";
+
 // import pic from "../assets/icons/portfolio_pic1080.png";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -10,9 +12,12 @@ import { Parallax } from "react-parallax";
 //import images
 import background1 from "../assets/backgroundImages/ocean2.jpg";
 import AnimatedLetters from "./AnimatedLetters/index";
+import { StyleContext } from "./StyleContext";
 
 //The Main component of website
 const Home = () => {
+  const { style, setStyle } = useContext(StyleContext);
+
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = [
     "J",
@@ -77,7 +82,7 @@ const Home = () => {
                 to="portfolio"
                 smooth
                 duration={500}
-                className="portfolioButton group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:animate-pulse hover:animate-infinite"
+                className="portfolioButton group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-violet-500 dark:to-purple-500 cursor-pointer hover:animate-pulse hover:animate-infinite"
               >
                 Portfolio
                 {/* added margin left to buttonAnimation instead of the buttonIcon */}
@@ -89,11 +94,19 @@ const Home = () => {
           </div>
 
           <div>
-            <img
-              src={pic}
-              alt="my profile"
-              className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
-            />
+            {style === "offCircle" ? (
+              <img
+                src={pic}
+                alt="my profile"
+                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
+              />
+            ) : (
+              <img
+                src={pic2}
+                alt="my profile"
+                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
+              />
+            )}
           </div>
         </div>
       </Parallax>
