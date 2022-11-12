@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import pic from "../assets/icons/heroImage.png";
+import pic from "../assets/icons/heroImage3.png";
 // import pic from "../assets/icons/portfolio_pic1080.png";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";

@@ -17,12 +17,21 @@ import { useState } from "react";
 
 function App() {
   const [style, setStyle] = useState("onCircle");
+  const [style2, setStyle2] = useState("onCircle");
   const [textPosition, setTextPosition] = useState([0, 0, 10]);
+  const [mobileView, setMobileView] = useState(false);
 
   return (
     <div>
       <StyleContext.Provider
-        value={{ style, setStyle, textPosition, setTextPosition }}
+        value={{
+          style,
+          setStyle,
+          textPosition,
+          setTextPosition,
+          mobileView,
+          setMobileView,
+        }}
       >
         <NavBar />
         <Home />

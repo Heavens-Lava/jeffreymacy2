@@ -6,7 +6,7 @@ const RoomPage2 = () => {
     <div className="h-[1700px] w-full  text-black bg-gradient-to-b dark:from-fuchsia-700 dark:to-fuchsia-500  from-primary-pink to-amber-200">
       {/* <div className="section-margin w-full bg-gradient-to-b dark:from-purple-700 dark:to-fuchsia-500 p-4"> */}
       <div className="section-margin w-full bg-gradient-to-b dark:from-fuchsia-700 dark:to-fuchsia-500 p-4">
-        <section className="first-section text-primary-dark dark:text-white section w-4/12 py-[200px] px-[4%] m-0 h-[1600px] bg-primary-pink dark:bg-pink-600  mr-auto bg-opacity-80 rounded-3xl">
+        <section className="first-section text-primary-dark dark:text-white section md:w-4/12 sm:w-full py-[200px] px-[4%] m-0 h-[1600px] bg-primary-pink dark:bg-pink-600  mr-auto bg-opacity-80 rounded-3xl">
           {/* <section className="first-section section w-1/2 py-[500px] px-[4%] m-0 h-screen bg-primary-pink mr-auto bg-opacity-80 "> */}
           <div className="section-intro-wrapper section-intro-wrapper pink-line relative py-[5%] px-[5%] border-b-2 border-solid dark:border-b-rose-200 border-b-pink-600 pb-80">
             <h1 className="section-title relative dark:text-rose-300 text-rose-500">

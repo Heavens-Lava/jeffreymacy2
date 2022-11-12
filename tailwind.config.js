@@ -23,6 +23,9 @@ module.exports = withAnimations({
       transitionProperty: {
         special: "all 0.2s ease-in-out",
       },
+      screens: {
+        xs: "380px",
+      },
     },
     fontFamily: {
       Montserrat: ["Montserrat"],

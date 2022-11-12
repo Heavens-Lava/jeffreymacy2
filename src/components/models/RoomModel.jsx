@@ -20,13 +20,19 @@ export function RoomModel(props) {
   // set rotationY to default, then we set it to equal the mouse
   const [rotationY, setRotationY] = useState(Math.PI / 4);
 
+  // sets textposition to move along with room
   const { textPosition, setTextPosition } = useContext(StyleContext);
+  // moves room
   const [positionX, setPositionX] = useState([0, 0, 10]);
   const [isScrolling, setIsScrolling] = useState(false);
 
   // current y scroll position
   const [y, setY] = useState(window.scrollY);
   const [movementDirection, setMovementDirection] = useState(1);
+
+  // used to change properties depending on screen viewport size
+  const { mobileView, setMobileView } = useContext(StyleContext);
+  const [scale, setScale] = useState(1);
 
   // ---------------------------------------- animations ----------------------------------------
   // plays animation when scene is rendered
@@ -80,18 +86,24 @@ export function RoomModel(props) {
       // console.log(group.current.position);
     }
 
-    // move room based off scrollingY
-    // console.log(group.current.position);
-    group.current.position.x = THREE.MathUtils.lerp(
-      group.current.position.x, //current position
-      isScrolling //if user is scrolling
-        ? group.current.position.x + movementDirection // if scrolling, move the current position in a position direction or negative direction,
-        : group.current.position.x, //else do not move(use current position)
-      0.1 // time (using interpolation)
-    );
-
     setTextPosition(group.current.position.x);
     // console.log(textPosition);
+
+    if (mobileView === false) {
+      setScale(1);
+
+      // move room based off scrollingY
+      // console.log(group.current.position);
+      group.current.position.x = THREE.MathUtils.lerp(
+        group.current.position.x, //current position
+        isScrolling //if user is scrolling
+          ? group.current.position.x + movementDirection // if scrolling, move the current position in a position direction or negative direction,
+          : group.current.position.x, //else do not move(use current position)
+        0.1 // time (using interpolation)
+      );
+    } else if (mobileView === true) {
+      setScale(0.5);
+    }
   });
 
   // ---------------------------------------- materials ----------------------------------------
@@ -129,6 +141,7 @@ export function RoomModel(props) {
       rotation={[0, rotationY, 0]}
       // starting position
       position={positionX}
+      scale={scale}
     >
       <group name="Scene">
         <group

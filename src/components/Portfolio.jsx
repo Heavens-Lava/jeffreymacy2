@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ecommerce from "../assets/portfolio/Capture.PNG";
 import createUser from "../assets/portfolio/create-user-preview.PNG";
 
@@ -29,6 +29,30 @@ const Portfolio = () => {
     },
   ];
 
+  const [opacity, setOpacity] = useState({ opacity: ".9" });
+
+  const detectSize = () => {
+    console.log(window.innerWidth);
+    // currently backwords
+    if (window.innerWidth < 660) {
+      setOpacity({ opacity: "0" });
+    } else if (window.innerWidth > 661) {
+      setOpacity({ opacity: ".9" });
+    }
+  };
+
+  useEffect(() => {
+    if (window.innerWidth < 660) {
+      setOpacity({ opacity: "0" });
+    }
+
+    window.addEventListener("resize", detectSize);
+
+    return () => {
+      window.removeEventListener("resize", detectSize);
+    };
+  }, [window.innerWidth]);
+
   // Portfolio display
   return (
     <div
@@ -41,7 +65,8 @@ const Portfolio = () => {
         bgImage={background2}
         name="home"
         className="homeSceneBackground md:h-screen w-full"
-        bgImageStyle={{ opacity: ".9" }}
+        // bgImageStyle={{ opacity: ".9" }}
+        bgImageStyle={opacity}
       >
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full mt-32 rounded-2xl bg-slate-800 bg-opacity-[0.17] dark:bg-black dark:bg-opacity-40">
           {/* adds padding between between the first section and second section */}
