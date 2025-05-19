@@ -24,11 +24,11 @@ const About = () => {
     });
   };
   const fadeIn = (element) => {
-    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power4.out" });
+    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power1.easeIn" });
   };
 
   // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
-  intersection && intersection.intersectionRatio > 0.8
+  intersection && intersection.intersectionRatio > 0.9
     ? // only elements with the fadeIn className is going to fade out
       fadeOut(".fadeIn")
     : // else fade in
@@ -38,7 +38,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="aboutBackground w-full h-screen bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
+      className="aboutBackground mt-20 pt-40 w-full h-[125vh] bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
     >
       <div className="aboutTextSection max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         {/* adds spacing between About text and paragraph text */}

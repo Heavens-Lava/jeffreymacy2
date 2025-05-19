@@ -7,6 +7,10 @@ import reactImage from "../assets/icons/react.png";
 // import graphql from "../assets/graphql.png";
 import github from "../assets/icons/github.png";
 import tailwind from "../assets/icons/tailwind.png";
+import godot from "../assets/icons/godot.png";
+import php from "../assets/icons/php.png";
+import MySql from "../assets/icons/mysql.png";
+import java from "../assets/icons/java.png";
 
 import { useIntersection } from "react-use";
 import gsap from "gsap";
@@ -49,6 +53,30 @@ const Experience = () => {
       title: "GitHub",
       style: "shadow-gray-400",
     },
+    {
+      id: 7,
+      src: godot,
+      title: "Godot",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 8,
+      src: php,
+      title: "PHP",
+      style: "shadow-gray-400 pt-10",
+    },
+    {
+      id: 9,
+      src: MySql,
+      title: "MySql",
+      style: "shadow-gray-400",
+    },
+    {
+      id: 10,
+      src: java,
+      title: "Java",
+      style: "shadow-gray-400",
+    },
   ];
 
   // ---------------------------------------- text transition effects ----------------------------------------
@@ -71,7 +99,8 @@ const Experience = () => {
     });
   };
   const fadeIn = (element) => {
-    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power4.out" });
+    // power describes how powerful the ease in property happens, use power1,power2,power3,power4
+    gsap.to(element, 1, { opacity: 0.1, y: -18, ease: "power1.easeIn" });
   };
 
   // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
@@ -83,19 +112,19 @@ const Experience = () => {
   //---------------------------------------- end transition effects ----------------------------------------
   return (
     <div
-      name="experience"
-      className="experienceBackground bg-gradient-to-b from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-screen"
+      name="experiencePage"
+      className="experienceBackground bg-gradient-to-b mt-80px from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-[200vh] pt-40 pb-72"
     >
       <div
         ref={sectionRef}
-        className="experienceSection max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white"
+        className="experienceSection max-w-screen-lg mx-auto p-4 mt-64 flex flex-col justify-center w-full h-full text-white"
       >
         <div>
-          <p class="fadeIn experienceHeader text-4xl font-bold border-b-4 border-gray-500 first-letter: inline">
+          <p class=" experienceHeader text-4xl font-bold border-b-4 border-gray-500 first-letter: inline">
             Experience
           </p>
-          <p className="fadeIn experienceParagraph py-6">
-            These are the technologies I've worked with
+          <p className=" experienceParagraph py-6">
+            Proficient Technical skills
           </p>
         </div>
 
@@ -103,10 +132,10 @@ const Experience = () => {
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
-              className={`fadeIn shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={` shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
-              <img src={src} alt="" className="w-20 mx-auto"></img>
-              <p className="fadeIn mt-4">{title}</p>
+              <img src={src} alt="" className="w-24 mx-auto"></img>
+              <p className=" mt-4">{title}</p>
             </div>
           ))}
         </div>

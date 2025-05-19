@@ -39,7 +39,7 @@ const Contact = () => {
     <div
       name="contact"
       // className="contactBackground h-screen w-full bg-gradient-to-b from-red-400 to-lime-200 dark:from-black dark:to-gray-800 p-4 text-white"
-      className="contactBackground h-screen w-full bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-500 dark:via-rose-700 dark:to-gray-800 p-4 text-white"
+      className="contactBackground h-max pb-16 pt-8 w-full bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-500 dark:via-rose-700 dark:to-gray-800 p-4 text-white"
     >
       <div
         ref={sectionRef}

@@ -102,7 +102,7 @@ const HTMLContent = ({ textPosition, mobileView }) => {
       <Html>
         {/* if mobileView is true, do not render these elements (darkmode toggle) */}
         {!mobileView && (
-          <div className="toggle-bar fixed flex flex-row justify-center items-center md:-top-[450px] md:-right-[650px] top-28 -right-20 z-50">
+          <div className="toggle-bar fixed flex flex-row justify-center items-center md:-top-[450px] md:-right-[650px]  -right-20 z-50">
             <div className="sun-wrapper flex flex-row justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const HTMLContent = ({ textPosition, mobileView }) => {
         position={[textPosition, 0, 0]}
         rotation={[0, 0, 0]}
       >
-        <div className="page -z-50 w-full h-screen overflow-hidden">
+        <div className="page -z-50 mt-72 w-full h-screen overflow-hidden">
           <div className="page-wrapper relative">
             <section className="hero w-[100vw] h-[100vh]">
               <div className="hero-wrapper relative h-full w-[calc(100%-160px)] m-auto max-w-7xl">

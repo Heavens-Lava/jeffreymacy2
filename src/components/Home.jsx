@@ -51,9 +51,9 @@ const Home = () => {
         strength={600}
         bgImage={background1}
         name="home"
-        className="homeSceneBackground md:h-screen w-full"
+        className="homeSceneBackground md:h-max w-full"
       >
-        <div className="homeSceneContent max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-0 pl-4 mt-60 md:flex-row z-50 bg-black bg-opacity-50 dark:bg-opacity-70 rounded-2xl">
+        <div className="homeSceneContent max-w-screen-lg mx-auto flex flex-col items-center justify-center h-max px-0 pl-4 mb-28 mt-60 md:flex-row z-50 bg-black bg-opacity-50 dark:bg-opacity-70 rounded-2xl">
           <div className="textColumn flex flex-col justify-center h-full ">
             <h2 className="titleText text-4xl sm:text-8xl font-bold text-white">
               <span className={letterClass}>H</span>
@@ -70,7 +70,7 @@ const Home = () => {
             </h2>
             <p className="paragraphText text-gray-300 dark:text-gray-400 pt-6 py-2 max-w-md animate-fadeIn animate-slow animate-delay-2s">
               I love to work on web applications, mobile games, and simple
-              productivity appications
+              productivity applications
             </p>
             <p className="paragraphText text-gray-300 dark:text-gray-400 py-4 max-w-md animate-fadeIn animate-slow animate-delay-3s">
               Get to know about me and what skills I offer

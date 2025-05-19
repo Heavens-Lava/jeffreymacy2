@@ -57,22 +57,22 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="portfolio-background bg-gradient-to-b from-sky-600 to-emerald-600 dark:from-black dark:to-gray-800 w-full text-white md:h-screen"
+      className="portfolio-background bg-gradient-to-b from-sky-600 to-emerald-600 dark:from-black dark:to-gray-800 w-full text-white  md:h-screen"
     >
       <Parallax
         strength={-600}
         // blur={{ min: -5, max: 15 }}
         bgImage={background2}
         name="home"
-        className="homeSceneBackground md:h-screen w-full"
+        className="homeSceneBackground  h-[150vh] w-full"
         // bgImageStyle={{ opacity: ".9" }}
         bgImageStyle={opacity}
       >
-        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full mt-32 rounded-2xl bg-slate-800 bg-opacity-[0.17] dark:bg-black dark:bg-opacity-40">
+        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full  mt-32 mb-40 rounded-2xl bg-slate-800 bg-opacity-[0.17] dark:bg-black dark:bg-opacity-30">
           {/* adds padding between between the first section and second section */}
           <div className="pb-8 mt-7">
             <p className="portfolioHeader text-4xl font-bold inline border-b-4 border-gray-500">
-              Portfolio
+              Portfolio Project Page
             </p>
             {/* add top and bottom padding */}
             <p className="portfolioParagraph py-5">
