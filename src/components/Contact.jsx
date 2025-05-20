@@ -55,7 +55,7 @@ const Contact = () => {
           <p className="fadeIn contactParagraph2 py-1">
             If your a hiring manager you can also get in touch with me at:
             'macy.jeffreyj@gmail.com'. I am also looking for any freelance
-            opportunites so you can text me at 623-374-1419.
+            opportunites so you can text me at (602)-619-4553.
           </p>
           <p className="fadeIn contactParagraph3 py-2">
             I do not often answer unknown phone calls so a text message will let
@@ -66,7 +66,8 @@ const Contact = () => {
         <div className="contactFormSection flex justify-center items-center">
           {/* form action is taken from getform.io, requires name attribute in each input */}
           <form
-            action="https://getform.io/f/72eb763b-5fa5-42d5-bbda-d93ac9f9b69c"
+            // action="https://getform.io/f/72eb763b-5fa5-42d5-bbda-d93ac9f9b69c"
+            action="https://getform.io/f/aejlynvb"
             method="POST"
             className="contactForm flex flex-col w-full md:w-1/2"
             // className="contactForm flex flex-col w-full md:w-1/2 animate-fadeInUp animate-delay-1s animate-duration-1000"

@@ -11,6 +11,7 @@ import godot from "../assets/icons/godot.png";
 import php from "../assets/icons/php.png";
 import MySql from "../assets/icons/mysql.png";
 import java from "../assets/icons/java.png";
+import springboot from "../assets/icons/springboot.png";
 
 import { useIntersection } from "react-use";
 import gsap from "gsap";
@@ -57,25 +58,31 @@ const Experience = () => {
       id: 7,
       src: godot,
       title: "Godot",
-      style: "shadow-gray-400",
+      style: "shadow-sky-600",
     },
     {
       id: 8,
       src: php,
       title: "PHP",
-      style: "shadow-gray-400 pt-10",
+      style: "shadow-gray-500 pt-10",
     },
     {
       id: 9,
       src: MySql,
       title: "MySql",
-      style: "shadow-gray-400",
+      style: "shadow-lime-400",
     },
     {
       id: 10,
       src: java,
       title: "Java",
-      style: "shadow-gray-400",
+      style: "shadow-orange-400",
+    },
+    {
+      id: 11,
+      src: springboot,
+      title: "Spring Boot",
+      style: "shadow-green-400",
     },
   ];
 
@@ -112,8 +119,9 @@ const Experience = () => {
   //---------------------------------------- end transition effects ----------------------------------------
   return (
     <div
-      name="experiencePage"
-      className="experienceBackground bg-gradient-to-b mt-80px from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-[200vh] pt-40 pb-72"
+      // name must stay experience for link to work
+      name="experience"
+      className="experienceBackground shadow-  bg-gradient-to-b mt-80px from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-[200vh] pt-40 pb-72"
     >
       <div
         ref={sectionRef}

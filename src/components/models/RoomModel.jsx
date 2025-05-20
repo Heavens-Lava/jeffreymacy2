@@ -54,7 +54,7 @@ export function RoomModel(props) {
 
       if (y > window.scrollY) {
         // console.log("scrolling up");
-        setMovementDirection(-2.8);
+        setMovementDirection(-2.9);
       } else if (y < window.scrollY) {
         // console.log("scrolling down");
         setMovementDirection(2.8);
@@ -62,7 +62,7 @@ export function RoomModel(props) {
       setY(window.scrollY);
 
       // if scrollY goes lower than 3500, reset room to default position
-      if (window.scrollY < 3500) {
+      if (window.scrollY < 5000) {
         setPositionX(0, 0, 10);
       }
     };

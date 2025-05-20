@@ -38,7 +38,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="aboutBackground mt-20 pt-40 w-full h-[125vh] bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
+      className="aboutBackground mt-28 pt-60 w-full h-[120vh] bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
     >
       <div className="aboutTextSection max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         {/* adds spacing between About text and paragraph text */}
@@ -48,16 +48,20 @@ const About = () => {
           </p>
         </div>
         <p className="fadeIn aboutParagraph1 text-xl mt-20">
-          I'm a very constructive and resourceful developer looking for a role
-          in IT with the opportunity to work with the latest technologies on
-          challenging and diverse projects.
+          I am proficient in developing and managing web applications with a
+          strong understanding of CRUD operations using PHP and MySQL. I can
+          efficiently create, read, update, and delete data, ensuring seamless
+          data management and functionality within applications.
         </p>
 
         <br />
 
         <p className="fadeIn aboutParagraph2 text-xl">
-          I'm always exploring and discovering new technologies that I use to
-          enhance and create quality work for myself and the people I work for
+          From college and my experience, I have designed database schemas,
+          wrote optimized queries, and implemented secure, user-friendly
+          interfaces to interact with data, which allows me to build robust and
+          scalable backend solutions. This foundation let me implement and build
+          dynamic web applications.
         </p>
       </div>
     </div>

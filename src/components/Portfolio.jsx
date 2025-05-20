@@ -76,9 +76,9 @@ const Portfolio = () => {
             </p>
             {/* add top and bottom padding */}
             <p className="portfolioParagraph py-5">
-              Check out some of my work right here. I have also worked on my
-              mobile game 'Dave's Adventure' which you can check out for free in
-              the Google Play Store
+              Check out some of my work right here. I have also built my mobile
+              game 'Dave's Adventure' using Godot which you can check out for
+              free in the Google Play Store
             </p>
           </div>
 

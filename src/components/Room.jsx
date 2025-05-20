@@ -102,7 +102,7 @@ const HTMLContent = ({ textPosition, mobileView }) => {
       <Html>
         {/* if mobileView is true, do not render these elements (darkmode toggle) */}
         {!mobileView && (
-          <div className="toggle-bar fixed flex flex-row justify-center items-center md:-top-[450px] md:-right-[650px]  -right-20 z-50">
+          <div className="pt-40 toggle-bar fixed flex flex-row justify-center items-center md:-top-[450px] md:-right-[650px]  -right-20 z-50">
             <div className="sun-wrapper flex flex-row justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +230,7 @@ const Room = () => {
     const handleScroll = () => {
       // console.log(window.scrollY);
       {
-        setStickyPosition(window.scrollY > 5000);
+        setStickyPosition(window.scrollY > 100);
       }
       // console.log(stickyPosition);
       // console.log(window.scrollY > 5000);
@@ -244,7 +244,7 @@ const Room = () => {
 
   return (
     // if mobileView is not true, render
-    <div className="w-full h-screen relative bg-gradient-to-b from-slate-300 to-primary-pink dark:from-black dark:to-fuchsia-700 transition-all dark:transition-all">
+    <div className=" w-full h-screen relative bg-gradient-to-b from-slate-300 to-primary-pink dark:from-black dark:to-fuchsia-700 transition-all dark:transition-all">
       {!mobileView ? (
         <StickyBox offsetBottom={0} offsetTop={0} bottom={false}>
           <div className="w-full h-screen absolute">
