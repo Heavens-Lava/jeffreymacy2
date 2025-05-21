@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import pic from "../assets/icons/heroImage3.png";
 import pic2 from "../assets/icons/heroImage4.png";
+import pic3 from "../assets/icons/profile purple.png";
 
+import pic4 from "../assets/icons/profile lightblue.png";
 // import pic from "../assets/icons/portfolio_pic1080.png";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -95,15 +97,15 @@ const Home = () => {
           <div>
             {style === "offCircle" ? (
               <img
-                src={pic}
+                src={pic4}
                 alt="my profile"
-                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
+                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-[900px] animate-tada animate-slow"
               />
             ) : (
               <img
-                src={pic2}
+                src={pic3}
                 alt="my profile"
-                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-fit animate-tada animate-slow"
+                className="profilePicture rounded-2xl mx-auto w-2/3 md:w-[900px] animate-tada animate-slow"
               />
             )}
           </div>
