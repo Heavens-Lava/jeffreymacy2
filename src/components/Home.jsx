@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
-import pic from "../assets/icons/heroImage3.png";
-import pic2 from "../assets/icons/heroImage4.png";
+// import pic from "../assets/icons/heroImage3.png";
+// import pic2 from "../assets/icons/heroImage4.png";
 import pic3 from "../assets/icons/profile purple.png";
 
 import pic4 from "../assets/icons/profile lightblue.png";
