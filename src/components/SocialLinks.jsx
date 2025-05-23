@@ -14,7 +14,8 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "https://www.linkedin.com/in/jeffrey-macy-b1b699251",
+      // href: "https://www.linkedin.com/in/jeffrey-macy-b1b699251",
+      href: "https://www.linkedin.com/in/jeffrey-macy-176746146/",
       style: "rounded-tr-md",
     },
     {
@@ -28,7 +29,7 @@ const SocialLinks = () => {
       href: "https://github.com/Heavens-Lava",
     },
     {
-      // Mail
+      // 420
       id: 3,
       child: (
         <>
