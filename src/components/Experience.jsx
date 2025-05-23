@@ -121,14 +121,14 @@ const Experience = () => {
     <div
       // name must stay experience for link to work
       name="experience"
-      className="experienceBackground shadow-  bg-gradient-to-b mt-80px from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-[200vh] pt-40 pb-72"
+      className="experienceBackground bg-gradient-to-b mt-80px from-emerald-600 to-slate-300 dark:from-gray-800 dark:to-black w-full h-[200vh] pt-40 pb-72"
     >
       <div
         ref={sectionRef}
         className="experienceSection max-w-screen-lg mx-auto p-4 mt-64 flex flex-col justify-center w-full h-full text-white"
       >
         <div>
-          <p class=" experienceHeader text-4xl font-bold border-b-4 border-gray-500 first-letter: inline">
+          <p class="experienceHeader text-4xl font-bold border-b-4 border-gray-500 first-letter: inline">
             Experience
           </p>
           <p className=" experienceParagraph py-6">
