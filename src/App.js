@@ -35,7 +35,7 @@ function App() {
       >
         <NavBar />
         <Home />
-        {/* <About />
+        <About />
         <InfiniteMarquee />
         <Portfolio />
         <Experience />
@@ -43,7 +43,7 @@ function App() {
         <RoomPage2 />
         <Contact />
 
-        <SocialLinks /> */}
+        <SocialLinks />
       </StyleContext.Provider>
     </div>
   );
