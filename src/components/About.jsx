@@ -18,7 +18,7 @@ const About = () => {
     gsap.to(element, 1, {
       opacity: 1,
       y: -60,
-      ease: "power4.out",
+      ease: "power1.in",
       // for secondary elements, it will take 1.0 seconds for it to appear after initial fade in
       stagger: { amount: 1.0 },
     });
