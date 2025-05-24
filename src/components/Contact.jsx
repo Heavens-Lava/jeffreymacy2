@@ -30,9 +30,9 @@ const Contact = () => {
   // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
   intersection && intersection.intersectionRatio > 0.2
     ? // only elements with the fadeIn className is going to fade out
-      fadeOut(".fadeIn")
+      fadeOut(".fadeOut")
     : // else fade in
-      fadeIn(".fadeIn");
+      fadeIn(".fadeOut");
   //---------------------------------------- end transition effects ----------------------------------------
 
   return (
