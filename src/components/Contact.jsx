@@ -55,7 +55,7 @@ const Contact = () => {
           <p className="fadeIn contactParagraph2 py-1">
             If your a hiring manager you can also get in touch with me at:
             'macy.jeffreyj@gmail.com'. I am also looking for any freelance
-            opportunites so you can text me at (602)-619-4553.
+            opportunities so you can text me at (602)-619-4553.
           </p>
           <p className="fadeIn contactParagraph3 py-2">
             I do not often answer unknown phone calls so a text message will let
