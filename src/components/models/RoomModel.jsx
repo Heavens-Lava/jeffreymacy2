@@ -67,10 +67,10 @@ export function RoomModel(props) {
       }
     };
 
-    window.addEventListener("scroll", scrollMovesRoom);
-    return () => {
-      window.removeEventListener("scroll", scrollMovesRoom);
-    };
+    // window.addEventListener("scroll", scrollMovesRoom);
+    // return () => {
+    //   window.removeEventListener("scroll", scrollMovesRoom);
+    // };
   }, [y]); //end useEffect
 
   //---------------------------------------- useFrame Start
