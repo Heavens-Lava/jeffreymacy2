@@ -39,7 +39,7 @@ function App() {
         <InfiniteMarquee />
         <Portfolio />
         <Experience />
-        <Room />
+        {/* <Room /> */}
         <RoomPage2 />
         <Contact />
 
