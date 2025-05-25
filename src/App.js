@@ -40,7 +40,7 @@ function App() {
         <Portfolio />
         <Experience />
         {/* <Room /> */}
-        {/* <RoomPage2 /> */}
+        <RoomPage2 />
         {/* <Contact />
 
         <SocialLinks /> */}
