@@ -244,112 +244,109 @@ const Room = () => {
 
   return (
     // if mobileView is not true, render
-    // <div className=" w-full h-screen relative bg-gradient-to-b from-slate-300 to-primary-pink dark:from-black dark:to-fuchsia-700 transition-all dark:transition-all">
-    //   {!mobileView ? (
-    //     <StickyBox offsetBottom={0} offsetTop={0} bottom={false}>
-    //       <div className="w-full h-screen absolute">
-    //         <Canvas
-    //           // colorManagement
-    //           // shadowMap
-    //           shadows
-    //           camera={{ position: [0, 50, 120], fov: 16 }}
-    //         >
-    //           {/* displays html elements in canvas */}
-    //           <HTMLContent
-    //             textPosition={textPosition}
-    //             mobileView={mobileView}
-    //           />
+    <div className=" w-full h-screen relative bg-gradient-to-b from-slate-300 to-primary-pink dark:from-black dark:to-fuchsia-700 transition-all dark:transition-all">
+      {!mobileView ? (
+        <StickyBox offsetBottom={0} offsetTop={0} bottom={false}>
+          <div className="w-full h-screen absolute">
+            <Canvas
+              // colorManagement
+              // shadowMap
+              shadows
+              camera={{ position: [0, 50, 120], fov: 16 }}
+            >
+              {/* displays html elements in canvas */}
+              <HTMLContent
+                textPosition={textPosition}
+                mobileView={mobileView}
+              />
 
-    //           {/* lights, sunlight has helper */}
-    //           <rectAreaLight
-    //             width={5}
-    //             height={1.5}
-    //             intensity={5}
-    //             position={[6.77988, 5.5, 10.5]} //[6.78, 1.18, ]
-    //             // color={"white"}
-    //             lookAt={[0, 0, 0]}
-    //             penumbra={1}
-    //             // this rotation is retrieved by 'fish tank base' rotation
-    //             // rotation={[0, Math.PI / 4, 0]}
-    //             rotation={[-Math.PI / 2, 0, Math.PI / 4]}
-    //           />
-    //           <SunLight intensity={intensity} color={color} />
-    //           <ambientLight
-    //             position={[0, 10, 0]}
-    //             intensity={intensity}
-    //             // color={"black"}
-    //           />
-    //           {/* <pointLight position={[5, 5, 5]} intensity={1} /> */}
+              {/* lights, sunlight has helper */}
+              <rectAreaLight
+                width={5}
+                height={1.5}
+                intensity={5}
+                position={[6.77988, 5.5, 10.5]} //[6.78, 1.18, ]
+                // color={"white"}
+                lookAt={[0, 0, 0]}
+                penumbra={1}
+                // this rotation is retrieved by 'fish tank base' rotation
+                // rotation={[0, Math.PI / 4, 0]}
+                rotation={[-Math.PI / 2, 0, Math.PI / 4]}
+              />
+              <SunLight intensity={intensity} color={color} />
+              <ambientLight
+                position={[0, 10, 0]}
+                intensity={intensity}
+                // color={"black"}
+              />
+              {/* <pointLight position={[5, 5, 5]} intensity={1} /> */}
 
-    //           {/* orbit controls */}
-    //           <Controls />
+              {/* orbit controls */}
+              <Controls />
 
-    //           {/* helpers to view the 3d enviroment */}
-    //           {/* <primitive object={new THREE.AxesHelper(10)} />
-    //   <primitive object={new THREE.GridHelper(50)} /> */}
+              {/* helpers to view the 3d enviroment */}
+              {/* <primitive object={new THREE.AxesHelper(10)} />
+      <primitive object={new THREE.GridHelper(50)} /> */}
 
-    //           {/* add models here */}
-    //           <Suspense fallback={null}>
-    //             <RoomModel />
-    //           </Suspense>
+              {/* add models here */}
+              <Suspense fallback={null}>{/* <RoomModel /> */}</Suspense>
 
-    //           {/* shadows */}
-    //           {/* <ContactShadows blur={2.5} scale={20} far={7} resolution={256} /> */}
-    //         </Canvas>
-    //       </div>
-    //     </StickyBox>
-    //   ) : (
-    //     <div className="w-full h-screen absolute">
-    //       <Canvas
-    //         // colorManagement
-    //         // shadowMap
-    //         shadows
-    //         camera={{ position: [0, 50, 120], fov: 16 }}
-    //       >
-    //         {/* displays html elements in canvas */}
-    //         <HTMLContent textPosition={textPosition} mobileView={mobileView} />
+              {/* shadows */}
+              {/* <ContactShadows blur={2.5} scale={20} far={7} resolution={256} /> */}
+            </Canvas>
+          </div>
+        </StickyBox>
+      ) : (
+        <div className="w-full h-screen absolute">
+          <Canvas
+            // colorManagement
+            // shadowMap
+            shadows
+            camera={{ position: [0, 50, 120], fov: 16 }}
+          >
+            {/* displays html elements in canvas */}
+            <HTMLContent textPosition={textPosition} mobileView={mobileView} />
 
-    //         {/* lights, sunlight has helper */}
-    //         <rectAreaLight
-    //           width={5}
-    //           height={1.5}
-    //           intensity={5}
-    //           position={[6.77988, 5.5, 10.5]} //[6.78, 1.18, ]
-    //           // color={"white"}
-    //           lookAt={[0, 0, 0]}
-    //           penumbra={1}
-    //           // this rotation is retrieved by 'fish tank base' rotation
-    //           // rotation={[0, Math.PI / 4, 0]}
-    //           rotation={[-Math.PI / 2, 0, Math.PI / 4]}
-    //         />
-    //         <SunLight intensity={intensity} color={color} />
-    //         <ambientLight
-    //           position={[0, 10, 0]}
-    //           intensity={intensity}
-    //           // color={"black"}
-    //         />
-    //         {/* <pointLight position={[5, 5, 5]} intensity={1} /> */}
+            {/* lights, sunlight has helper */}
+            <rectAreaLight
+              width={5}
+              height={1.5}
+              intensity={5}
+              position={[6.77988, 5.5, 10.5]} //[6.78, 1.18, ]
+              // color={"white"}
+              lookAt={[0, 0, 0]}
+              penumbra={1}
+              // this rotation is retrieved by 'fish tank base' rotation
+              // rotation={[0, Math.PI / 4, 0]}
+              rotation={[-Math.PI / 2, 0, Math.PI / 4]}
+            />
+            <SunLight intensity={intensity} color={color} />
+            <ambientLight
+              position={[0, 10, 0]}
+              intensity={intensity}
+              // color={"black"}
+            />
+            {/* <pointLight position={[5, 5, 5]} intensity={1} /> */}
 
-    //         {/* removed if in mobile view */}
-    //         {/* orbit controls */}
-    //         {/* <Controls /> */}
+            {/* removed if in mobile view */}
+            {/* orbit controls */}
+            {/* <Controls /> */}
 
-    //         {/* helpers to view the 3d enviroment */}
-    //         {/* <primitive object={new THREE.AxesHelper(10)} />
-    //   <primitive object={new THREE.GridHelper(50)} /> */}
+            {/* helpers to view the 3d enviroment */}
+            {/* <primitive object={new THREE.AxesHelper(10)} />
+      <primitive object={new THREE.GridHelper(50)} /> */}
 
-    //         {/* add models here */}
-    //         <Suspense fallback={null}>
-    //           <RoomModel />
-    //         </Suspense>
+            {/* add models here */}
+            <Suspense fallback={null}>
+              <RoomModel />
+            </Suspense>
 
-    //         {/* shadows */}
-    //         {/* <ContactShadows blur={2.5} scale={20} far={7} resolution={256} /> */}
-    //       </Canvas>
-    //     </div>
-    //   )}
-    // </div>
-    <div></div>
+            {/* shadows */}
+            {/* <ContactShadows blur={2.5} scale={20} far={7} resolution={256} /> */}
+          </Canvas>
+        </div>
+      )}
+    </div>
   );
 };
 
