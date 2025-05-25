@@ -42,35 +42,35 @@ export function RoomModel(props) {
 
     // console.log(window.scrollY);
 
-    // const scrollMovesRoom = () => {
-    //   // can only scroll when room gets into viewport
-    //   if (window.scrollY > 4700) {
-    //     setIsScrolling(true);
-    //   } else {
-    //     setIsScrolling(false);
-    //     setPositionX([0, 0, 10]);
-    //     // console.log(positionX);
-    //   }
+    const scrollMovesRoom = () => {
+      // can only scroll when room gets into viewport
+      if (window.scrollY > 4700) {
+        setIsScrolling(true);
+      } else {
+        setIsScrolling(false);
+        setPositionX([0, 0, 10]);
+        // console.log(positionX);
+      }
 
-    //   if (y > window.scrollY) {
-    //     // console.log("scrolling up");
-    //     setMovementDirection(-2.8);
-    //   } else if (y < window.scrollY) {
-    //     // console.log("scrolling down");
-    //     setMovementDirection(2.8);
-    //   }
-    //   setY(window.scrollY);
+      if (y > window.scrollY) {
+        // console.log("scrolling up");
+        setMovementDirection(-2.8);
+      } else if (y < window.scrollY) {
+        // console.log("scrolling down");
+        setMovementDirection(2.8);
+      }
+      setY(window.scrollY);
 
-    //   // if scrollY goes lower than 3500, reset room to default position
-    //   if (window.scrollY < 3500) {
-    //     setPositionX(0, 0, 10);
-    //   }
-    // };
+      // if scrollY goes lower than 3500, reset room to default position
+      if (window.scrollY < 3500) {
+        setPositionX(0, 0, 10);
+      }
+    };
 
-    // window.addEventListener("scroll", scrollMovesRoom);
-    // return () => {
-    //   window.removeEventListener("scroll", scrollMovesRoom);
-    // };
+    window.addEventListener("scroll", scrollMovesRoom);
+    return () => {
+      window.removeEventListener("scroll", scrollMovesRoom);
+    };
   }, [y]); //end useEffect
 
   //---------------------------------------- useFrame Start
@@ -170,7 +170,7 @@ export function RoomModel(props) {
           position={[-0.06, 7.5, 2.48]}
           rotation={[0, Math.PI / 4, 0]}
         >
-          <mesh
+          {/* <mesh
             name="Cube012_1"
             castShadow
             receiveShadow
@@ -1732,7 +1732,7 @@ export function RoomModel(props) {
             receiveShadow
             geometry={nodes.Circle_2.geometry}
             material={materials["Material.022"]}
-          />
+          /> */}
         </group>
         <mesh
           name="Plane002"
