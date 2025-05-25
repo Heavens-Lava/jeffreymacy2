@@ -97,13 +97,13 @@ const Home = () => {
           <div>
             {style === "offCircle" ? (
               <img
-                src={pic1}
+                src={pic2}
                 alt="my profile"
                 className="profilePicture rounded-2xl mx-auto w-2/3 md:w-[900px] animate-tada animate-slow"
               />
             ) : (
               <img
-                src={pic2}
+                src={pic1}
                 alt="my profile"
                 className="profilePicture rounded-2xl mx-auto w-2/3 md:w-[900px] animate-tada animate-slow"
               />
