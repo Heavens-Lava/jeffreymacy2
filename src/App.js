@@ -40,10 +40,10 @@ function App() {
         <Portfolio />
         <Experience />
         {/* <Room /> */}
-        <RoomPage2 />
-        {/* <Contact />
+        {/* <RoomPage2 /> */}
+        <Contact />
 
-        <SocialLinks /> */}
+        <SocialLinks />
       </StyleContext.Provider>
     </div>
   );
