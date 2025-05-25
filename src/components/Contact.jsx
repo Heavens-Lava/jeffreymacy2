@@ -17,7 +17,7 @@ const Contact = () => {
     gsap.to(element, 1, {
       opacity: 1,
       y: -12,
-      ease: "power1.out",
+      ease: "power4.out",
       // for secondary elements, it will take 1.0 seconds for it to appear after initial fade in
       stagger: { amount: 1.0 },
     });

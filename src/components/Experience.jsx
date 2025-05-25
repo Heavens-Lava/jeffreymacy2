@@ -107,7 +107,7 @@ const Experience = () => {
   };
   const fadeIn = (element) => {
     // power describes how powerful the ease in property happens, use power1,power2,power3,power4
-    gsap.to(element, 1, { opacity: 0.1, y: -18, ease: "power1.in" });
+    gsap.to(element, 1, { opacity: 0.1, y: -18, ease: "power4.out" });
   };
 
   // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
