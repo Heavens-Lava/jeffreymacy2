@@ -81,15 +81,22 @@ export const SunLight = ({ intensity, color }) => {
 const HTMLContent = ({ textPosition, mobileView }) => {
   // 'offCircle' is day time, toggled to the left, 'onCircle' is night time to the right
   const { style, setStyle } = useContext(StyleContext);
-  const [fill, setFill] = useState("white");
+  const [fill, setFill] = useState("black");
 
   const changeToggleCircle = () => {
-    if (style === "offCircle") {
-      setStyle("onCircle");
-      setFill("white");
-    } else {
+    if (style === "onCircle") {
       setStyle("offCircle");
       setFill("black");
+    } else {
+      setStyle("onCircle");
+      setFill("white");
+
+      // if (style === "offCircle") {
+      //   setStyle("onCircle");
+      //   setFill("white");
+      // } else {
+      //   setStyle("offCircle");
+      //   setFill("black");
     }
     //this console.log will be one step behind
     // console.log(style);
