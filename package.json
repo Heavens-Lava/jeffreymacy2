@@ -2,6 +2,10 @@
   "homepage": ".",
   "name": "my-portfolio",
   "version": "0.1.0",
+  "exports": {
+    "./*": "./tsl",
+    ".": "./tsl"
+  },
   "private": false,
   "dependencies": {
     "@ashthornton/asscroll": "^2.0.11",
