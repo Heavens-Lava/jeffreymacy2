@@ -230,7 +230,7 @@ const Room = () => {
     const handleScroll = () => {
       // console.log(window.scrollY);
       {
-        setStickyPosition(window.scrollY > 100);
+        setStickyPosition(window.scrollY > 5000);
       }
       // console.log(stickyPosition);
       // console.log(window.scrollY > 5000);
