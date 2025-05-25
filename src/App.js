@@ -36,14 +36,14 @@ function App() {
         <NavBar />
         <Home />
         <About />
-        {/* <InfiniteMarquee />
+        <InfiniteMarquee />
         <Portfolio />
-        <Experience />
+        {/* <Experience />
         <Room />
         <RoomPage2 />
-        <Contact />
+        <Contact /> */}
 
-        <SocialLinks /> */}
+        <SocialLinks />
       </StyleContext.Provider>
     </div>
   );

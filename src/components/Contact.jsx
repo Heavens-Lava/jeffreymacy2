@@ -17,14 +17,14 @@ const Contact = () => {
     gsap.to(element, 1, {
       opacity: 1,
       y: -12,
-      ease: "power1.in",
+      ease: "power1.out",
       // for secondary elements, it will take 1.0 seconds for it to appear after initial fade in
       stagger: { amount: 1.0 },
     });
   };
 
   const fadeIn = (element) => {
-    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power1.in" });
+    gsap.to(element, 1, { opacity: 0, y: -20, ease: "power4.out" });
   };
 
   // if intersection is greater than 0.6 (if screen viewport is 60% in view)...
