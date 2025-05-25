@@ -339,9 +339,7 @@ const Room = () => {
       <primitive object={new THREE.GridHelper(50)} /> */}
 
             {/* add models here */}
-            <Suspense fallback={null}>
-              <RoomModel />
-            </Suspense>
+            <Suspense fallback={null}>{/* <RoomModel /> */}</Suspense>
 
             {/* shadows */}
             {/* <ContactShadows blur={2.5} scale={20} far={7} resolution={256} /> */}

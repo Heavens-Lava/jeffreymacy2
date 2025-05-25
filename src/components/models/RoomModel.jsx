@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 
 import { useGLTF, useAnimations } from "@react-three/drei";
-// import * as THREE from "three";
+import * as THREE from "three";
 
 // import textures
 import videoUrl from "../../textures/iceland.mp4";
