@@ -38,10 +38,10 @@ function App() {
         <About />
         <InfiniteMarquee />
         <Portfolio />
-        {/* <Experience />
+        <Experience />
         <Room />
         <RoomPage2 />
-        <Contact /> */}
+        <Contact />
 
         <SocialLinks />
       </StyleContext.Provider>
