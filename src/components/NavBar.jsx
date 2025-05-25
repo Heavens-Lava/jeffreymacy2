@@ -34,24 +34,24 @@ const NavBar = () => {
   ];
 
   const { style, setStyle } = useContext(StyleContext);
-  const [fill, setFill] = useState("black");
+  const [fill, setFill] = useState("white");
 
   const changeToggleCircle = () => {
-    if (style === "onCircle") {
-      setStyle("offCircle");
-      setFill("black");
-    } else {
-      setStyle("onCircle");
-      setFill("white");
-    }
-
-    // if (style === "offCircle") {
-    //   setStyle("onCircle");
-    //   setFill("white");
-    // } else {
+    // if (style === "onCircle") {
     //   setStyle("offCircle");
     //   setFill("black");
+    // } else {
+    //   setStyle("onCircle");
+    //   setFill("white");
     // }
+
+    if (style === "offCircle") {
+      setStyle("onCircle");
+      setFill("white");
+    } else {
+      setStyle("offCircle");
+      setFill("black");
+    }
 
     //this console.log will be one step behind
     // console.log(style);
