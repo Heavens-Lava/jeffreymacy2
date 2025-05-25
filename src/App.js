@@ -39,11 +39,11 @@ function App() {
         <InfiniteMarquee />
         <Portfolio />
         <Experience />
-        <Room />
+        {/* <Room />
         <RoomPage2 />
         <Contact />
 
-        <SocialLinks />
+        <SocialLinks /> */}
       </StyleContext.Provider>
     </div>
   );
