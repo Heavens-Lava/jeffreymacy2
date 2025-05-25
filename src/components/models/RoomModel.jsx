@@ -75,36 +75,36 @@ export function RoomModel(props) {
 
   //---------------------------------------- useFrame Start
   // Mouse Animations using useFrame
-  useFrame((state, delta) => {
-    // console.log(state.mouse.x);
-    // sets the models rotation depending on mouse positionX on screen(while in 3d canvas)
-    setRotationY(state.mouse.x * 0.2);
+  // useFrame((state, delta) => {
+  //   // console.log(state.mouse.x);
+  //   // sets the models rotation depending on mouse positionX on screen(while in 3d canvas)
+  //   setRotationY(state.mouse.x * 0.2);
 
-    // if no longer scrolling, set to false
-    if (y === window.scrollY) {
-      setIsScrolling(false);
-      // console.log(group.current.position);
-    }
+  //   // if no longer scrolling, set to false
+  //   if (y === window.scrollY) {
+  //     setIsScrolling(false);
+  //     // console.log(group.current.position);
+  //   }
 
-    setTextPosition(group.current.position.x);
-    // console.log(textPosition);
+  //   setTextPosition(group.current.position.x);
+  //   // console.log(textPosition);
 
-    if (mobileView === false) {
-      setScale(1);
+  //   if (mobileView === false) {
+  //     setScale(1);
 
-      // move room based off scrollingY
-      // console.log(group.current.position);
-      group.current.position.x = THREE.MathUtils.lerp(
-        group.current.position.x, //current position
-        isScrolling //if user is scrolling
-          ? group.current.position.x + movementDirection // if scrolling, move the current position in a position direction or negative direction,
-          : group.current.position.x, //else do not move(use current position)
-        0.1 // time (using interpolation)
-      );
-    } else if (mobileView === true) {
-      setScale(0.5);
-    }
-  });
+  //     // move room based off scrollingY
+  //     // console.log(group.current.position);
+  //     group.current.position.x = THREE.MathUtils.lerp(
+  //       group.current.position.x, //current position
+  //       isScrolling //if user is scrolling
+  //         ? group.current.position.x + movementDirection // if scrolling, move the current position in a position direction or negative direction,
+  //         : group.current.position.x, //else do not move(use current position)
+  //       0.1 // time (using interpolation)
+  //     );
+  //   } else if (mobileView === true) {
+  //     setScale(0.5);
+  //   }
+  // });
 
   // ---------------------------------------- materials ----------------------------------------
   // material for fish tank
@@ -170,7 +170,7 @@ export function RoomModel(props) {
           position={[-0.06, 7.5, 2.48]}
           rotation={[0, Math.PI / 4, 0]}
         >
-          {/* <mesh
+          <mesh
             name="Cube012_1"
             castShadow
             receiveShadow
@@ -1732,7 +1732,7 @@ export function RoomModel(props) {
             receiveShadow
             geometry={nodes.Circle_2.geometry}
             material={materials["Material.022"]}
-          /> */}
+          />
         </group>
         <mesh
           name="Plane002"
