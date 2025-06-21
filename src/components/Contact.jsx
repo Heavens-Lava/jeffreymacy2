@@ -39,61 +39,65 @@ const Contact = () => {
     <div
       name="contact"
       // className="contactBackground h-screen w-full bg-gradient-to-b from-red-400 to-lime-200 dark:from-black dark:to-gray-800 p-4 text-white"
-      className="contactBackground h-max pb-16 pt-8 w-full bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-500 dark:via-rose-700 dark:to-gray-800 p-4 text-white"
+      className="contactBackground  h-max pb-18 pt-8 w-full bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-500 dark:via-rose-700 dark:to-gray-800 p-4 text-white"
     >
       <div
         ref={sectionRef}
-        className="contactSection flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
+        className="contactSection  rounded-md flex flex-col  justify-center max-w-screen-lg mx-auto h-full"
       >
         <div className="pb-8">
-          <p className="fadeIn contactHeader text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className=" contactHeader text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          <p className="fadeIn contactParagraph1 py-6">
+          <p className=" contactParagraph1 py-6">
             Talk with me! If you like my website, send me a Message :D
           </p>
-          <p className="fadeIn contactParagraph2 py-1">
-            If your a hiring manager you can also get in touch with me at:
+          <p className=" contactParagraph2 py-1">
+            If you are looking for a website developer, you can get in touch with me at:
             'macy.jeffreyj@gmail.com'. I am also looking for any freelance
             opportunities so you can text me at (602)-619-4553.
           </p>
-          <p className="fadeIn contactParagraph3 py-2">
+          <p className=" contactParagraph3 py-2">
             I do not often answer unknown phone calls so a text message will let
             me know who you are. Thanks for visiting my website!
           </p>
         </div>
 
-        <div className="contactFormSection flex justify-center items-center">
+        <div className="contactFormSection flex justify-center items-center ">
           {/* form action is taken from getform.io, requires name attribute in each input */}
           <form
             // action="https://getform.io/f/72eb763b-5fa5-42d5-bbda-d93ac9f9b69c"
             action="https://getform.io/f/aejlynvb"
             method="POST"
-            className="contactForm flex flex-col w-full md:w-1/2"
+            className=" opacity-70 contactForm flex flex-col w-full md:w-1/2  p-2 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
             // className="contactForm flex flex-col w-full md:w-1/2 animate-fadeInUp animate-delay-1s animate-duration-1000"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="contactFormName p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              className="contactFormEmail my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className="contactFormDetails p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            ></textarea>
+            <div className="contactanimation z-10  rounded-2xl p-2">
+              <div className="z-20 bg-gradient-to-b from-amber-200 to-red-400 dark:from-fuchsia-900 dark:via-rose-700 dark:to-gray-800 flex flex-col  rounded-md ">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  className="contactFormName p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                />
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email"
+                  className="contactFormEmail my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Enter your message"
+                  rows="10"
+                  className="contactFormDetails p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 dark:from-violet-500 dark:to-fuchsia-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Send Message
-            </button>
+                <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 dark:from-violet-500 dark:to-fuchsia-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+                  Send Message
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

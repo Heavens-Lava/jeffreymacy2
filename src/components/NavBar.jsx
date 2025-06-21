@@ -34,7 +34,7 @@ const NavBar = () => {
   ];
 
   const { style, setStyle } = useContext(StyleContext);
-  const [fill, setFill] = useState("white");
+  const [fill, setFill] = useState("black");
 
   const changeToggleCircle = () => {
     // if (style === "onCircle") {

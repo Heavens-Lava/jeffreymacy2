@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import InfiniteMarquee from "./components/InfiniteMarquee";
+import Example from "./components/example";
 
 import "./App.scss";
 import Room from "./components/Room";
@@ -42,6 +43,7 @@ function App() {
         <Room />
         <RoomPage2 />
         <Contact />
+        {/* <Example /> */}
 
         <SocialLinks />
       </StyleContext.Provider>

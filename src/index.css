@@ -114,3 +114,64 @@ iframe {
 }
 
 /* ----------------------------------------  */
+/* for contact.jsx component */
+
+.contactanimation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 2rem; */
+  overflow: hidden;
+}
+
+.contactanimation::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #fff917,
+    #c21e56,
+    #45f3ff
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.contactanimation::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #fff917,
+    #c21e56,
+    #45f3ff
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* for example.jsx */

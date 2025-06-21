@@ -38,7 +38,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="aboutBackground mt-28 pt-60 w-full h-[120vh] bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
+      className="aboutBackground mt-28 pt-60 w-full h-[140vh] bg-gradient-to-b from-sky-100 to-blue-700 dark:from-gray-800 dark:to-black text-white"
     >
       <div className="aboutTextSection max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         {/* adds spacing between About text and paragraph text */}
